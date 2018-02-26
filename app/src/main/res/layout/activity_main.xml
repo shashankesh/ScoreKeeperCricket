@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.scorekeeper.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Team A"
+                android:textSize="@dimen/font_size" />
+
+            <TextView
+                android:id="@+id/Team_a_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:outlineProvider="background"
+                android:padding="8dp"
+                android:text="R: 0/0"
+                android:textSize="@dimen/font_size" />
+
+            <TextView
+                android:id="@+id/Team_a_over"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:outlineProvider="background"
+                android:padding="8dp"
+                android:text="O: 0.0"
+                android:textSize="@dimen/font_size" />
+
+
+            <Button
+                style="@style/RunButton"
+                android:onClick="add1"
+                android:text="run" />
+
+            <Button
+                style="@style/RunButton"
+                android:onClick="add4"
+                android:text="four" />
+
+            <Button
+                style="@style/RunButton"
+                android:onClick="add6"
+                android:text="six" />
+
+            <Button
+                style="@style/RunButton"
+                android:onClick="extra"
+                android:text="+1 extra" />
+
+            <Button
+                style="@style/RunButton"
+                android:onClick="wck"
+                android:text="Wicket" />
+
+            <Button
+                style="@style/RunButton"
+                android:onClick="noRun"
+                android:text="no run" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Team B"
+                android:textSize="@dimen/font_size" />
+
+            <TextView
+                android:id="@+id/Team_b_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:outlineProvider="background"
+                android:padding="8dp"
+                android:text="R: 0/0"
+                android:textSize="@dimen/font_size" />
+
+            <TextView
+                android:id="@+id/Team_b_over"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:outlineProvider="background"
+                android:padding="8dp"
+                android:text="O: 0.0"
+                android:textSize="@dimen/font_size" />
+
+            <Button
+                style="@style/RunButtonB"
+                android:onClick="add1B"
+                android:text="run" />
+
+            <Button
+                style="@style/RunButtonB"
+                android:onClick="add4B"
+                android:text="four" />
+
+            <Button
+                style="@style/RunButtonB"
+                android:onClick="add6B"
+                android:text="six" />
+
+            <Button
+                style="@style/RunButtonB"
+                android:onClick="extraB"
+                android:text="+1 extra" />
+
+            <Button
+                style="@style/RunButtonB"
+                android:onClick="wckB"
+                android:text="Wicket" />
+
+            <Button
+                style="@style/RunButtonB"
+                android:onClick="noRunB"
+                android:text="no run" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:onClick="team_a"
+            android:text="Team a"
+            android:id="@+id/start"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:onClick="reset"
+            android:text="reset" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:onClick="team_b"
+            android:text="team b" />
+
+
+    </LinearLayout>
+</RelativeLayout>
