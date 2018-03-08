@@ -1,195 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.android.scorekeeper.MainActivity">
 
-    <LinearLayout
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        tools:context="com.example.android.scorekeeper.MainActivity">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/linearlayout1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Team A"
+                    android:textSize="@dimen/font_size" />
+
+                <TextView
+                    android:id="@+id/Team_a_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-medium"
+                    android:outlineProvider="background"
+                    android:padding="8dp"
+                    android:text="R: 0 / 0"
+                    android:textSize="@dimen/font_size" />
+
+                <TextView
+                    android:id="@+id/Team_a_over"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:outlineProvider="background"
+                    android:padding="8dp"
+                    android:text="O: 0.0"
+                    android:textSize="@dimen/font_size" />
+
+
+                <Button
+                    android:id="@+id/run1"
+                    style="@style/RunButton"
+                    android:onClick="add1"
+                    android:text="run" />
+
+                <Button
+                    android:id="@+id/run2"
+                    style="@style/RunButton"
+                    android:onClick="add4"
+                    android:text="four" />
+
+                <Button
+                    android:id="@+id/run3"
+                    style="@style/RunButton"
+                    android:onClick="add6"
+                    android:text="six" />
+
+                <Button
+                    android:id="@+id/run4"
+                    style="@style/RunButton"
+                    android:onClick="extra"
+                    android:text="+1 extra" />
+
+                <Button
+                    android:id="@+id/run15"
+                    style="@style/RunButton"
+                    android:onClick="wck"
+                    android:text="Wicket" />
+
+                <Button
+                    android:id="@+id/run16"
+                    style="@style/RunButton"
+                    android:onClick="noRun"
+                    android:text="no run" />
+            </LinearLayout>
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_margin="8dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="Team A"
-                android:textSize="@dimen/font_size" />
+                android:background="#585858"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
 
-            <TextView
-                android:id="@+id/Team_a_score"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="sans-serif-medium"
-                android:outlineProvider="background"
-                android:padding="8dp"
-                android:text="R: 0 / 0"
-                android:textSize="@dimen/font_size" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/Team_a_over"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:outlineProvider="background"
-                android:padding="8dp"
-                android:text="O: 0.0"
-                android:textSize="@dimen/font_size" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Team B"
+                    android:textSize="@dimen/font_size" />
 
+                <TextView
+                    android:id="@+id/Team_b_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-medium"
+                    android:outlineProvider="background"
+                    android:padding="8dp"
+                    android:text="R: 0 / 0"
+                    android:textSize="@dimen/font_size" />
 
-            <Button
-                style="@style/RunButton"
-                android:onClick="add1"
-                android:text="run"
-                android:id="@+id/run1"/>
+                <TextView
+                    android:id="@+id/Team_b_over"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:outlineProvider="background"
+                    android:padding="8dp"
+                    android:text="O: 0.0"
+                    android:textSize="@dimen/font_size" />
 
-            <Button
-                style="@style/RunButton"
-                android:onClick="add4"
-                android:text="four"
-                android:id="@+id/run2"/>
+                <Button
+                    style="@style/RunButtonB"
+                    android:onClick="add1B"
+                    android:text="run"
+                    android:id="@+id/run17"/>
 
-            <Button
-                style="@style/RunButton"
-                android:onClick="add6"
-                android:text="six"
-                android:id="@+id/run3"/>
+                <Button
+                    style="@style/RunButtonB"
+                    android:onClick="add4B"
+                    android:text="four"
+                    android:id="@+id/run18"/>
 
-            <Button
-                style="@style/RunButton"
-                android:onClick="extra"
-                android:text="+1 extra"
-                android:id="@+id/run4"/>
+                <Button
+                    style="@style/RunButtonB"
+                    android:onClick="add6B"
+                    android:text="six"
+                    android:id="@+id/run19"/>
 
-            <Button
-                style="@style/RunButton"
-                android:onClick="wck"
-                android:text="Wicket"
-                android:id="@+id/run15"/>
+                <Button
+                    style="@style/RunButtonB"
+                    android:onClick="extraB"
+                    android:text="+1 extra"
+                    android:id="@+id/run10"/>
 
-            <Button
-                style="@style/RunButton"
-                android:onClick="noRun"
-                android:text="no run"
-                android:id="@+id/run16"/>
+                <Button
+                    style="@style/RunButtonB"
+                    android:onClick="wckB"
+                    android:text="Wicket"
+                    android:id="@+id/run11"/>
+
+                <Button
+                    style="@style/RunButtonB"
+                    android:onClick="noRunB"
+                    android:text="no run"
+                    android:id="@+id/run12"/>
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearlayout1"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="4dp"
+            android:orientation="horizontal">
+            <ToggleButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="8dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="Team B"
-                android:textSize="@dimen/font_size" />
+                android:layout_margin="4dp"
+                android:id="@+id/start"
+                android:textOn="team a"
+                android:checked="false"
+                android:textOff="team b"/>
 
-            <TextView
-                android:id="@+id/Team_b_score"
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="sans-serif-medium"
-                android:outlineProvider="background"
-                android:padding="8dp"
-                android:text="R: 0 / 0"
-                android:textSize="@dimen/font_size" />
+                android:layout_margin="4dp"
+                android:onClick="reset"
+                android:text="reset" />
 
-            <TextView
-                android:id="@+id/Team_b_over"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:outlineProvider="background"
-                android:padding="8dp"
-                android:text="O: 0.0"
-                android:textSize="@dimen/font_size" />
 
-            <Button
-                style="@style/RunButtonB"
-                android:onClick="add1B"
-                android:text="run"
-                android:id="@+id/run17"/>
-
-            <Button
-                style="@style/RunButtonB"
-                android:onClick="add4B"
-                android:text="four"
-                android:id="@+id/run18"/>
-
-            <Button
-                style="@style/RunButtonB"
-                android:onClick="add6B"
-                android:text="six"
-                android:id="@+id/run19"/>
-
-            <Button
-                style="@style/RunButtonB"
-                android:onClick="extraB"
-                android:text="+1 extra"
-                android:id="@+id/run10"/>
-
-            <Button
-                style="@style/RunButtonB"
-                android:onClick="wckB"
-                android:text="Wicket"
-                android:id="@+id/run11"/>
-
-            <Button
-                style="@style/RunButtonB"
-                android:onClick="noRunB"
-                android:text="no run"
-                android:id="@+id/run12"/>
         </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
-        <ToggleButton
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:id="@+id/start"
-            android:textOn="team a"
-            android:checked="false"
-            android:textOff="team b"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:onClick="reset"
-            android:text="reset" />
-
-
-    </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/alert"
-        android:layout_centerInParent="true"
-        android:layout_alignParentTop="true"
-        android:padding="20dp"
-        android:textColor="#ff0000"
-        android:fontFamily="sans-serif-medium"
-        android:textSize="24dp"/>
-</RelativeLayout>
+            android:id="@+id/alert"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:padding="20dp"
+            android:textColor="#ff0000"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="24dp"/>
+        </RelativeLayout>
+</ScrollView>
