@@ -23,6 +23,104 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final ToggleButton toggle = (ToggleButton) findViewById(R.id.start);
+        if (toggle.isChecked()) {
+            // The toggle is enabled
+            try {
+                Button btn = (Button) findViewById(R.id.run10);
+                btn.setText(String.valueOf(String.format("+1 extra")));
+                Button btn1 = (Button) findViewById(R.id.run12);
+                btn1.setText(String.valueOf(String.format("no run")));
+
+                Button btn2 = (Button) findViewById(R.id.run11);
+                btn2.setText(String.valueOf(String.format("wicket")));
+
+
+                Button btn3 = (Button) findViewById(R.id.run18);
+                btn3.setText(String.valueOf(String.format("four")));
+
+                Button btn4 = (Button) findViewById(R.id.run19);
+                btn4.setText(String.valueOf(String.format("six")));
+                Button btn5 = (Button) findViewById(R.id.run17);
+                btn5.setText(String.valueOf(String.format("run")));
+
+                Button btn6 = (Button) findViewById(R.id.run4);
+                btn6.setText(String.valueOf(String.format("+1 extra")));
+
+                Button btn7 = (Button) findViewById(R.id.run16);
+                btn7.setText(String.valueOf(String.format("no run")));
+
+                Button btn8 = (Button) findViewById(R.id.run15);
+                btn8.setText(String.valueOf(String.format("wicket")));
+
+                Button btn9 = (Button) findViewById(R.id.run2);
+                btn9.setText(String.valueOf(String.format("four")));
+
+                Button btn0 = (Button) findViewById(R.id.run3);
+                btn0.setText(String.valueOf(String.format("six")));
+
+                Button btn11 = (Button) findViewById(R.id.run1);
+                btn11.setText(String.valueOf(String.format("run")));
+                setA = true;
+                setB = false;
+                for (int i = 0; i < 6; i++) {
+                    v[i].setEnabled(true);
+                    v[i].setClickable(true);
+                }
+
+            } catch (Exception ex) {
+                display_score(run, wk, ov, bl, "");
+                display_scoreB(runB, wkB, ovB, blB, "");
+            }
+        } else {
+            // The toggle is disabled
+            try {
+                Button btn = (Button) findViewById(R.id.run10);
+                btn.setText(String.valueOf(String.format("+1 extra")));
+                Button btn1 = (Button) findViewById(R.id.run12);
+                btn1.setText(String.valueOf(String.format("no run")));
+
+                Button btn2 = (Button) findViewById(R.id.run11);
+                btn2.setText(String.valueOf(String.format("wicket")));
+
+
+                Button btn3 = (Button) findViewById(R.id.run18);
+                btn3.setText(String.valueOf(String.format("four")));
+
+                Button btn4 = (Button) findViewById(R.id.run19);
+                btn4.setText(String.valueOf(String.format("six")));
+                Button btn5 = (Button) findViewById(R.id.run17);
+                btn5.setText(String.valueOf(String.format("run")));
+
+                Button btn6 = (Button) findViewById(R.id.run4);
+                btn6.setText(String.valueOf(String.format("+1 extra")));
+
+                Button btn7 = (Button) findViewById(R.id.run16);
+                btn7.setText(String.valueOf(String.format("no run")));
+
+                Button btn8 = (Button) findViewById(R.id.run15);
+                btn8.setText(String.valueOf(String.format("wicket")));
+
+                Button btn9 = (Button) findViewById(R.id.run2);
+                btn9.setText(String.valueOf(String.format("four")));
+
+                Button btn0 = (Button) findViewById(R.id.run3);
+                btn0.setText(String.valueOf(String.format("six")));
+
+                Button btn11 = (Button) findViewById(R.id.run1);
+                btn11.setText(String.valueOf(String.format("run")));
+                setA = false;
+                setB = true;
+                for (int i = 6; i < 12; i++) {
+                    v[i].setEnabled(true);
+                    v[i].setClickable(true);
+                }
+
+
+            } catch (Exception ex) {
+                display_score(run, wk, ov, bl, "");
+                display_scoreB(runB, wkB, ovB, blB, "");
+            }
+        }
         toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
 
         {
